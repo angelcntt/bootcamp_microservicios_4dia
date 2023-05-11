@@ -15,8 +15,10 @@ public class mainTaller2 {
 		
 		
 		String productswithc= shopping.stream().filter(n-> n.name.startsWith("C")).sorted((x,y)->x.name.compareTo(y.name)).map(x-> x.name).collect(Collectors.joining(", ","Products start with C are ", ","));
-		
+		String regex="[Cc].*";
+		String productswithc2= shopping.stream().filter(n-> n.name.matches(regex)).sorted((x,y)->x.name.compareTo(y.name)).map(x-> x.name).collect(Collectors.joining(", ","Products start with C are ", ","));
 		System.out.println(productswithc);
+		System.out.println(productswithc2);
 	}
 
 }
