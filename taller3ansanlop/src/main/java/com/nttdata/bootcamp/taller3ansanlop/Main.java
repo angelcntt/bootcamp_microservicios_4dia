@@ -10,7 +10,7 @@ public class Main {
 		Observable<String> observable= Observable.create(emitter->{
 			
 			emitter.onNext("firts text ");
-			
+			emitter.onNext("second text ");
 			emitter.onComplete();
 		});
 
